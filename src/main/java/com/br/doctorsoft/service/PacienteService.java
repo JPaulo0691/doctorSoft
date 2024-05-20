@@ -3,16 +3,13 @@ package com.br.doctorsoft.service;
 import com.br.doctorsoft.dtos.Pacientes.Request.PacienteRequest;
 import com.br.doctorsoft.dtos.Pacientes.Response.PacienteResponse;
 import com.br.doctorsoft.exceptions.PacienteNaoEncontradoException;
-import com.br.doctorsoft.model.HistoricoCadastral;
 import com.br.doctorsoft.model.Pacientes;
-import com.br.doctorsoft.repository.HistoricoCadastral.HistoricoCadastralRepository;
 import com.br.doctorsoft.repository.Paciente.PacienteRepository;
 import com.br.doctorsoft.repository.Paciente.PacienteRepositoryCustomImpl;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -46,7 +43,7 @@ public class PacienteService {
 
         Optional<Pacientes> pacienteId = repository.findById(id);
 
-        if(!pacienteId.isPresent()){
+        if(pacienteId.isEmpty()){
             throw new PacienteNaoEncontradoException();
         }
 
@@ -60,7 +57,7 @@ public class PacienteService {
 
         Optional<Pacientes> encontrarPaciente = repository.findById(id);
 
-        if(!encontrarPaciente.isPresent()){
+        if(encontrarPaciente.isEmpty()){
             throw new PacienteNaoEncontradoException();
         }
 
@@ -80,7 +77,7 @@ public class PacienteService {
 
         Optional<Pacientes> encontrarPaciente = repository.findById(id);
 
-        if(!encontrarPaciente.isPresent()){
+        if(encontrarPaciente.isEmpty()){
             throw new PacienteNaoEncontradoException();
         }
 
