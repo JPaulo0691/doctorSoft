@@ -20,15 +20,9 @@ public class PacienteController {
     PacienteService pacienteService;
 
     @PostMapping
-<<<<<<< HEAD
     public ResponseEntity<Pacientes> cadastrar(@RequestBody PacienteRequest pacienteRequest){
         return ResponseEntity.status(HttpStatus.CREATED)
                              .body(pacienteService.cadastrarPaciente(pacienteRequest));
-=======
-    public ResponseEntity<Pacientes> cadastrar(@RequestBody PacienteRequest pacienteDto){
-        return ResponseEntity.status(HttpStatus.CREATED)
-                             .body(pacienteService.cadastrarPaciente(pacienteDto));
->>>>>>> origin/master
     }
 
     @GetMapping
