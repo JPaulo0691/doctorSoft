@@ -23,12 +23,20 @@ public class PacienteService {
     private PacienteRepositoryCustomImpl repositoryCustom;
 
     @Transactional
+<<<<<<< HEAD
     public Pacientes cadastrarPaciente(PacienteRequest request){
 
         Pacientes pacientes = new Pacientes(request);
         pacientes = repository.save(pacientes);
 
         return pacientes;
+=======
+    public Pacientes cadastrarPaciente(PacienteRequest pacienteDto){
+
+        Pacientes pacientes = new Pacientes(pacienteDto);
+
+        return repository.save(pacientes);
+>>>>>>> origin/master
     }
 
     public List<Pacientes>  listarTodosOsPacientes(){
@@ -43,7 +51,11 @@ public class PacienteService {
 
         Optional<Pacientes> pacienteId = repository.findById(id);
 
+<<<<<<< HEAD
         if(pacienteId.isEmpty()){
+=======
+        if(!pacienteId.isPresent()){
+>>>>>>> origin/master
             throw new PacienteNaoEncontradoException();
         }
 
@@ -57,7 +69,11 @@ public class PacienteService {
 
         Optional<Pacientes> encontrarPaciente = repository.findById(id);
 
+<<<<<<< HEAD
         if(encontrarPaciente.isEmpty()){
+=======
+        if(!encontrarPaciente.isPresent()){
+>>>>>>> origin/master
             throw new PacienteNaoEncontradoException();
         }
 
@@ -77,7 +93,11 @@ public class PacienteService {
 
         Optional<Pacientes> encontrarPaciente = repository.findById(id);
 
+<<<<<<< HEAD
         if(encontrarPaciente.isEmpty()){
+=======
+        if(!encontrarPaciente.isPresent()){
+>>>>>>> origin/master
             throw new PacienteNaoEncontradoException();
         }
 

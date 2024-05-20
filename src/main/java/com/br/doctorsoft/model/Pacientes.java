@@ -13,8 +13,11 @@ import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.br.CPF;
 
 import java.time.LocalDate;
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
+=======
+>>>>>>> origin/master
 
 @Data
 @AllArgsConstructor
@@ -41,16 +44,22 @@ public class Pacientes {
 
     private Boolean ativo;
 
+<<<<<<< HEAD
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<HistoricoCadastral> historicoCadastral = new ArrayList<>();
 
+=======
+>>>>>>> origin/master
     public Pacientes(PacienteRequest pacienteRequest){
         this.nome = pacienteRequest.getNome();
         this.cpf = pacienteRequest.getCpf();
         this.dataDeNascimento = pacienteRequest.getDataDeNascimento();
         this.ativo = true;
+<<<<<<< HEAD
 
         HistoricoCadastral historico = new HistoricoCadastral(LocalDate.now(),pacienteRequest.getMotivo(), this);
         this.historicoCadastral.add(historico);
+=======
+>>>>>>> origin/master
     }
 }

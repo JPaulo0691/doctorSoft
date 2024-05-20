@@ -1,6 +1,9 @@
 package com.br.doctorsoft.dtos.Pacientes.Request;
 
+<<<<<<< HEAD
 import com.br.doctorsoft.model.HistoricoCadastral;
+=======
+>>>>>>> origin/master
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
@@ -20,6 +23,9 @@ public class PacienteRequest {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
     private LocalDate dataDeNascimento;
+<<<<<<< HEAD
 
     private String motivo;
+=======
+>>>>>>> origin/master
 }
