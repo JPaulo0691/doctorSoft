@@ -26,9 +26,9 @@ public class PacienteService {
     private PacienteRepositoryCustomImpl repositoryCustom;
 
     @Transactional
-    public Pacientes cadastrarPaciente(PacienteRequest pacienteRequest){
+    public Pacientes cadastrarPaciente(PacienteRequest request){
 
-        Pacientes pacientes = new Pacientes(pacienteRequest);
+        Pacientes pacientes = new Pacientes(request);
         pacientes = repository.save(pacientes);
 
         return pacientes;
