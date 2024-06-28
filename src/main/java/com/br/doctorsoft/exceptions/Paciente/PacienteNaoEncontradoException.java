@@ -1,4 +1,4 @@
-package com.br.doctorsoft.exceptions;
+package com.br.doctorsoft.exceptions.Paciente;
 
 import com.br.doctorsoft.utils.mensageExceptions.MensagensExceptions;
 import jakarta.persistence.EntityNotFoundException;

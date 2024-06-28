@@ -2,7 +2,7 @@ package com.br.doctorsoft.service;
 
 import com.br.doctorsoft.dtos.Pacientes.Request.PacienteRequest;
 import com.br.doctorsoft.dtos.Pacientes.Response.PacienteResponse;
-import com.br.doctorsoft.exceptions.PacienteNaoEncontradoException;
+import com.br.doctorsoft.exceptions.Paciente.PacienteNaoEncontradoException;
 import com.br.doctorsoft.model.Pacientes;
 import com.br.doctorsoft.repository.Paciente.PacienteRepository;
 import com.br.doctorsoft.repository.Paciente.PacienteRepositoryCustomImpl;

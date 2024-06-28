@@ -1,0 +1,17 @@
+package com.br.doctorsoft.enums;
+
+public enum EspecialidadeEnum {
+    CARDIOLOGISTA,
+    ENDOCRINOLOGISTA,
+    GINECOLOGISTA,
+    ALERGISTA,
+    PNEUMOLOGISTA,
+    CIRURGIAO_GERAL,
+    PEDIATRA,
+    PSIQUIATRA,
+    NEUROLOGISTA,
+    ONCOLOGISTA,
+    UROLOGISTA,
+    ORTOPEDISTA,
+    ESPECIALIDADE_NAO_CADASTRADA
+}
